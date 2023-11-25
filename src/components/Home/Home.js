@@ -1,4 +1,5 @@
 import React from "react";
+import SingleColor from "../SingleColour/SingleColor";
 
 const Home = () => {
   return (
@@ -9,6 +10,10 @@ const Home = () => {
           <input type="text" placeholder="#f15025"></input>
           <button className="btn">Submit</button>
         </form>
+      </section>
+
+      <section className="color">
+        <SingleColor />
       </section>
     </>
   );
