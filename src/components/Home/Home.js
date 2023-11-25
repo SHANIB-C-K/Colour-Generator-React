@@ -12,7 +12,7 @@ const Home = () => {
         </form>
       </section>
 
-      <section className="color">
+      <section className="colors">
         <SingleColor />
       </section>
     </>
