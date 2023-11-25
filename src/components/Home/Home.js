@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import SingleColor from "../SingleColour/SingleColor";
+import Values from "values.js";
 
 const Home = () => {
+  const [list, setList] = useState(new Values("#f15025").all(10));
+
   return (
     <>
       <section className="container">
@@ -13,7 +16,14 @@ const Home = () => {
       </section>
 
       <section className="colors">
-        <SingleColor />
+        {list.map((color, index) => (
+          <SingleColor
+            key={index}
+            {...color}
+            index={index}
+            hexColor={color.hex}
+          />
+        ))}
       </section>
     </>
   );
