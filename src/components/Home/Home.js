@@ -9,14 +9,14 @@ const Home = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    try{
-        let colors = new Values(color).all(10);
-        setList(colors);
-    }catch{
-        setError(true);
-        console.log(error);
+    try {
+      let colors = new Values(color).all(10);
+      setList(colors);
+    } catch {
+      setError(true);
+      console.log(error);
     }
-  }
+  };
 
   return (
     <>
@@ -28,7 +28,7 @@ const Home = () => {
             placeholder="#f15025"
             value={color}
             onChange={(e) => setColor(e.target.value)}
-            className={`${error ? 'error': null}`}
+            className={`${error ? "error" : null}`}
           ></input>
           <button className="btn">Submit</button>
         </form>
